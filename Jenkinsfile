@@ -20,6 +20,11 @@ pipeline {
                 git credentialsId: 'github', url: 'git@github.com:ramukumar555/jenkins_test.git'
             }
         }
+        stage('print') {
+            steps {
+                echo "Printing something"
+            }
+        }        
         stage('Build') {
             steps {
                 // Run Maven on a Unix agent.
